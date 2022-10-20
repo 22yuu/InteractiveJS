@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(25deg, violet, pink);
+}
+figure h1 {
+  position: absolute;
+  top: 7vh;
+  left: 4vw;
+  font-size: 0;
+  font-size: 0;
+}
+figure h1 strong {
+  font: bold 36px/1.4 "arial";
+  color: #fff;
+  letter-spacing: 1px;
+}
+figure h1 span {
+  font: 12px/1 "arial";
+  color: #fff;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+figure .menu {
+  position: absolute;
+  top: 8vh;
+  right: 4vw;
+  font-size: 4vw;
+  font-size: 24px;
+  color: #fff;
+}
+figure section {
+  width: 20vw;
+  height: 65vh;
+  position: absolute;
+  left: 50%;
+  top: 150%;
+  margin-left: -10vw;
+  margin-top: -32vh;
+}
+figure section article {
+  /* article은 프레임 역할 */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+figure section article .inner {
+  /* 실제적인 크기는 inner */
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 5vh 2.5vw 8vh;
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+  /* 비활성화 상태에서는 반투명하게 보여줄 것 */
+}
+figure > p {
+  position: absolute;
+  bottom: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 12px/1 "arial";
+  color: #fff;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=style.css.map */

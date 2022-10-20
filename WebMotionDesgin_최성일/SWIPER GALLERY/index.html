@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1c01da663f.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <h1>DCODELAB</h1>
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">
+                <!--
+                    모션작업Tip: 전체 프레임 안에 바로 컨텐츠들을 넣으면 안좋다
+                    해당 프레임에 transition이나 스크립트가 들어가 있으면 안쪽 ui가 깨질 수 있다.
+                    그래서 보통적으로 큰 틀안에 class inner 요소를 추가해 inner class 안에 컨텐츠를 넣는다.
+                -->
+                <div class="inner">
+                    <div class="con">
+                        <img src="./img/pic1.png" alt="pic1">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, non.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="./img/pic2.png" alt="pic2">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, non.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="./img/pic3.png" alt="pic3">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, non.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="./img/pic4.png" alt="pic4">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, non.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="./img/pic5.png" alt="pic5">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, non.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <nav class="swiper-pagination"></nav>
+
+        <nav class="swiper-button-prev navi"></nav>
+        <nav class="swiper-button-next navi"></nav>
+    </main>
+
+    <footer>
+        2022 DECOELAB &copy; ALL RIGHTS RESERVED.
+    </footer>
+
+    <script>
+        const swiper = new Swiper("main", {
+            speed: 500,
+            loop: true,
+            direction: 'horizontal',
+            grabCursor: true,
+            slidesPerView: 'auto', // 한번에 보여줄 화면 갯수 default "auto"
+            spaceBetween: 100, // 슬라이드 간격 설정 (px)
+            centeredSlides: true, // 활성화 패널을 항상 가로 가운데로 배치
+
+            pagination: {
+                el: ".swiper-pagination", // 페이지네이션 버튼 추가
+                // clickable: true, // 클릭 여부 추가
+                type: "fraction",
+            },
+
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next",
+            },
+            effect: "coverflow", // 3D event
+            coverflowEffect: {
+                rotate: 50, // y축 회전 각도
+                strectch: -100, // 당겨짐 정도
+                depth: 400, // 입체적인 왜곡효과 정도
+                slideShadows: false, // 패널의 그림자 설정
+            }
+        });
+
+    </script>
+</body>
+</html>

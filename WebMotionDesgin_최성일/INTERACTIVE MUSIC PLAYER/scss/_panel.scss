@@ -1,0 +1,31 @@
+section {
+    // vh, vw 개념을 파악해야 될 듯..
+    width: 20vw;
+    height: 65vh;
+    position: absolute;
+    left: 50%;
+    top: 150%;
+    margin-left: -10vw;
+    margin-top: -32vh;
+
+    article {
+        /* article은 프레임 역할 */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+        .inner {
+            /* 실제적인 크기는 inner */
+            width: 100%;
+            height: 100%;
+            background:#fff;
+            padding: 5vh 2.5vw 8vh;
+            border-radius: 10px;
+            box-shadow: 10px 10px 20px rgba(0,0,0,.1);
+            opacity: 0.6; /* 비활성화 상태에서는 반투명하게 보여줄 것 */
+            
+        }
+    }
+}
