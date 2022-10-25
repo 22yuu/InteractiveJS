@@ -107,5 +107,69 @@ body main .btnUp:hover p {
   top: 50%;
   opacity: 1;
 }
+body main .btnDown {
+  display: block;
+  width: 61px;
+  height: 50px;
+  position: absolute;
+  left: -70px;
+  bottom: 0px;
+}
+body main .btnDown::before, body main .btnDown::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: #777;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform-origin: right bottom;
+  transition: 0.5s 0.2s;
+}
+body main .btnDown::before {
+  transform: rotate(-45deg);
+}
+body main .btnDown::after {
+  transform: rotate(45deg);
+}
+body main .btnDown span {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: #777;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transition: 0.5s;
+}
+body main .btnDown p {
+  font: 12px/1 "orbitron";
+  color: #111;
+  text-align: center;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s 0.4s;
+}
+body main .btnDown:hover::before {
+  transform: rotate(-45deg) translateY(40px);
+  opacity: 0;
+}
+body main .btnDown:hover::after {
+  transform: rotate(45deg) translateY(40px);
+  opacity: 0;
+}
+body main .btnDown:hover span {
+  transform: translateY(40px);
+  opacity: 0;
+}
+body main .btnDown:hover p {
+  top: 50%;
+  opacity: 1;
+}
 
 /*# sourceMappingURL=style.css.map */
