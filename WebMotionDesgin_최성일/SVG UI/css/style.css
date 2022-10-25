@@ -181,6 +181,7 @@ body main .panel li {
   position: absolute;
   top: 0px;
   left: 0px;
+  perspective: 400px;
 }
 body main .panel li .bg {
   width: 100%;
@@ -205,15 +206,15 @@ body main .panel li:nth-of-type(4) .bg {
 }
 body main .panel li.on .bg {
   opacity: 1;
-  transform: translateY(0%);
+  transform: translateY(0%) rotateX(0deg);
 }
 body main .panel li.up .bg {
   opacity: 0;
-  transform: translateY(-80%);
+  transform: translateY(-80%) rotateX(50deg);
 }
 body main .panel li.down .bg {
   opacity: 0;
-  transform: translateY(80%);
+  transform: translateY(80%) rotateX(-50deg);
 }
 
 /*# sourceMappingURL=style.css.map */
