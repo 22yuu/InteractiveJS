@@ -15,8 +15,12 @@ names.forEach((name, index) => {
     list[index].style.transform = `rotate(${deg*index}deg) translateY(-100vh)`;
     pic.style.backgroundImage = `url(./img/${name}.jpg)`;
     h2.innerText = name;
-
+    const audio = document.createElement('audio');
+    audio.setAttribute('src', `music/${name}.mp3`);
+    audio.setAttribute('loop', 'loop');
+    list[index].append(audio);
 })
+
 for(let i = 0; i < len; i++) {
     list[i].style.transform = `rotate(${deg*i}deg) translateY(-100vh)`;
     // i마다 deg 정도 rotate! 또한 transform의 의해 회전이 되거나 변형이 되어도 축은 변하지 않음 그래서 translateY로 위로 요소를 보내면 회전한 방향에서 바로 자기자신 위로 수직으로 올라가게 됨
@@ -37,3 +41,25 @@ next.addEventListener('click', () => {
     for(let el of list) el.classList.remove('on');
     list[active].classList.add('on');
 })
+
+for(let el of list) {
+    const play = el.querySelector('.play');
+    const pause = el.querySelector('.pause');
+    const load = el.querySelector('.load');
+
+    play.addEventListener('click', e => {
+        e.currentTarget.closest('article').querySelector('.pic').classList.add('on');
+        e.currentTarget.closest('article').querySelector('audio').play();
+    })
+    pause.addEventListener('click', e => {
+        e.currentTarget.closest('article').querySelector('.pic').classList.remove('on');
+        e.currentTarget.closest('article').querySelector('audio').pause();
+    })
+
+    load.addEventListener('click', e => {
+        e.currentTarget.closest('article').querySelector('.pic').classList.add('on');
+        e.currentTarget.closest('article').querySelector('audio').load();
+        e.currentTarget.closest('article').querySelector('audio').play();
+    })
+
+}
